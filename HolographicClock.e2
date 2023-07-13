@@ -17,6 +17,7 @@
 # Chip settings
 E2 = entity()
 E2:setAlpha(0)
+DEBUG = 0
 
 # Unit conversion settings
 Hr = time("hour")
@@ -71,11 +72,14 @@ if(first() | duped())
     
     
     # Identity and debugging shit
-    hint("SashiHL2's Clock Loaded", 2) # Let the server log your existance for easier identification incase you bork something up
-    if(owner():steamID() != "STEAM_0:1:6453548")
+    if DEBUG == 1
     {
-        hint("Thank you for using my E2 code, I hope you enjoy it!", 2)
-        hint("http://steamcommunity.com/id/sashi - Visit my page!", 2)
+        hint("SashiHL2's Clock Loaded", 2) # Let the server log your existance for easier identification incase you bork something up
+        if(owner():steamID() != "STEAM_0:1:6453548")
+        {
+            hint("Thank you for using my E2 code, I hope you enjoy it!", 2)
+            hint("http://steamcommunity.com/id/sashi - Visit my page!", 2)
+        }
     }
 }
 
