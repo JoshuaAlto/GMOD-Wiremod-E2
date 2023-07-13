@@ -17,7 +17,7 @@
 # Chip settings
 E2 = entity()
 E2:setAlpha(0)
-DEBUG = 0
+INFO = 1
 
 # Unit conversion settings
 Hr = time("hour")
@@ -71,14 +71,15 @@ if(first() | duped())
     holoParent(9, 6)
     
     
-    # Identity and debugging shit
-    if DEBUG == 1
+    # Identity popups
+    if(INFO == 1)
     {
         hint("SashiHL2's Clock Loaded", 2) # Let the server log your existance for easier identification incase you bork something up
         if(owner():steamID() != "STEAM_0:1:6453548")
         {
             hint("Thank you for using my E2 code, I hope you enjoy it!", 2)
             hint("http://steamcommunity.com/id/sashi - Visit my page!", 2)
+            hint("Set INFO = 0 to remove this message.", 2)
         }
     }
 }
